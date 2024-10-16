@@ -1,0 +1,83 @@
+CSS Introduction: Overview and Key Concepts
+CSS (Cascading Style Sheets) is the language used to style web pages. It enhances the appearance of HTML elements, allowing developers to define how content is displayed on different media (like screens, print, etc.). The use of CSS helps in separating content (HTML) from presentation (CSS), making websites easier to manage and more flexible in terms of design.
+
+Key Points:
+What is CSS?
+
+Cascading Style Sheets (CSS) is used to describe how HTML elements should be displayed.
+CSS allows you to control the layout of multiple web pages with one file.
+External stylesheets are saved as .css files, making it easy to maintain and update.
+How CSS Solves Problems:
+
+Before CSS, HTML handled both content and style, making web development tedious (e.g., inline styling with <font> tags).
+CSS allows for centralized styling, meaning you can apply changes across multiple pages just by editing one file.
+Advantages of CSS:
+
+Reusability: You can apply one style to multiple HTML pages.
+Efficiency: Styling is centralized, so changing one rule can update all elements on all linked pages.
+Device Adaptation: CSS makes it easier to adapt the layout for various screen sizes and devices.
+CSS Syntax Example
+CSS uses selectors to target HTML elements and apply rules to them. A rule consists of properties and their associated values. For example:
+
+css
+Copy code
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+Explanation:
+Selector: Targets the HTML element (e.g., body, h1, p).
+Property: Defines the style (e.g., background-color, color, font-family, font-size).
+Value: Sets the style for that property (e.g., lightblue, white, verdana, 20px).
+CSS Demo: One Page, Multiple Stylesheets
+You can link different stylesheets to a single HTML page and switch between them dynamically. This demonstrates how CSS styles can change the look and feel of a page without modifying the HTML.
+
+HTML Example:
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+  <link id="stylesheet" rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+  <button onclick="changeStyle('style1.css')">Stylesheet 1</button>
+  <button onclick="changeStyle('style2.css')">Stylesheet 2</button>
+
+  <script>
+    function changeStyle(sheet) {
+      document.getElementById('stylesheet').setAttribute('href', sheet);
+    }
+  </script>
+</body>
+</html>
+Explanation:
+The <link> tag is used to link a stylesheet to the HTML document.
+By clicking the buttons, you can dynamically switch between different stylesheets (e.g., style1.css and style2.css).
+Why Use CSS?
+Design Consistency: Applying the same CSS rules across multiple web pages ensures that your design is consistent.
+Time-saving: With an external stylesheet, you can control multiple pages from a single file. Change the file, and every page that uses it will automatically update.
+Responsive Design: CSS can adapt your design for different screen sizes (like desktops, tablets, and mobile devices).
+Example of CSS Benefits
+Imagine having a website with 100 pages. If you want to change the background color or text style, doing so directly in the HTML for every page would be time-consuming. However, if you use CSS, you only need to make that change once in the CSS file.
+
+Quick Practice Task for Students
+Goal: Change the text color and background color for a web page using CSS.
+
+Steps:
+
+Create an HTML file and link it to a CSS file.
+Use CSS to change the background color of the page to lightblue.
+Change the color of the <h1> heading to white and align it to the center.
+Change the font family of all <p> tags to verdana and set the font size to 20px.
