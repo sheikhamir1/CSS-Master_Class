@@ -1,0 +1,9 @@
+body {
+  background-color: yellow;
+  color: aqua;
+}
+h1,
+p {
+  background-color: blue;
+  color: white;
+}

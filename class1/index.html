@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class1</title>
+    <link id="thiscss" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>this is our first css class</h1>
+    <h1>i am testing h1</h1>
+    this is body text
+    <p>and we enjoy it</p>
+    <p>i am testing p</p>
+    <button onclick="changeStyle('style.css')">Stylesheet 1</button>
+    <button onclick="changeStyle('style2.css')">Stylesheet 2</button>
+
+    <script>
+      function changeStyle(sheet) {
+        document.getElementById("thiscss").setAttribute("href", sheet);
+      }
+    </script>
+  </body>
+</html>

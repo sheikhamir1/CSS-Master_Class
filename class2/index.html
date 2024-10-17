@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class2</title>
+    <style>
+      /* * {
+        margin: 0px;
+        padding: 0px;
+      } */
+      div {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+      /* h1 {
+        margin: 10px;
+      } */
+      .first {
+        color: white;
+        font-size: 16px;
+      }
+      .firstDiv {
+        background-color: crimson;
+      }
+      #second {
+        color: white;
+        font-size: 16px;
+      }
+      #secondDiv {
+        background-color: rgb(232, 32, 149);
+      }
+      /* div,
+      h1 {
+        border: 2px solid black;
+        margin: 10px;
+        padding: 5px;
+      } */
+      /* div h2 {
+        background-color: crimson;
+        color: white;
+        font-size: 10px;
+      } */
+      div > h2 {
+        background-color: crimson;
+        color: white;
+        font-size: 10px;
+      }
+      /* h2 + p {
+        background-color: yellow;
+      } */
+      h2 ~ p {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="firstDiv">
+      <h1 class="first">this is heading one</h1>
+    </div>
+    <div id="secondDiv">
+      <h1 id="second">this is heading Two</h1>
+      <h2>testing</h2>
+    </div>
+    <div class="firstDiv">
+      <h1 class="first">this is heading Three</h1>
+    </div>
+    <div>
+      <h2>what is css</h2>
+      <p>we use css for stying the webpage</p>
+      <h2>what is HTML</h2>
+      <p>we use html for create the website layout</p>
+      <h2>what is javascript</h2>
+      <p>we use javascripte to make page alive</p>
+    </div>
+    <div>
+      <div>
+        <h2>what is css test</h2>
+        <p>we use css for stying the webpage</p>
+        <ul>
+          <h2>what is HTML</h2>
+          <p>we use html for create the website layout</p>
+          <p>we use html for create the website layout</p>
+
+          <h2>what is javascript</h2>
+        </ul>
+        <p>we use javascripte to make page alive</p>
+      </div>
+    </div>
+  </body>
+</html>
