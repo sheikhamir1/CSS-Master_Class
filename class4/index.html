@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class4</title>
+    <style>
+      div {
+        border: 2px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+      /* p::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+          } */
+      p::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+      p.intro::first-letter {
+        color: #ff0000;
+        font-size: 200%;
+      }
+      p::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+
+      p::first-line {
+        color: #0000ff;
+        font-variant: small-caps;
+      }
+      h1::after {
+        content: url("https://cdn.pixabay.com/photo/2023/05/12/10/47/ai-generated-7988262_1280.jpg");
+      }
+      ::marker {
+        color: red;
+        font-size: 23px;
+      }
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>This is the first line. The rest of the text continues as usual.</p>
+    </div>
+    <div>
+      <p class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis
+        nulla, incidunt optio hic quis pariatur sapiente saepe, doloremque
+        voluptatum nobis laborum iusto tenetur accusamus maiores itaque
+        veritatis sed dolores?
+      </p>
+    </div>
+    <div>
+      <p class="intro">This paragraph will have a styled first letter.</p>
+    </div>
+    <div>
+      <h1>This is a heading with a smiley before it.</h1>
+    </div>
+    <div>
+      <h1>This is a heading with a smiley before it.</h1>
+    </div>
+    <div>
+      <ul>
+        <li>This is a list item with a red marker.</li>
+      </ul>
+    </div>
+  </body>
+</html>

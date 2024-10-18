@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class3</title>
+    <style>
+      .div1 {
+        border: 2px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+      .h1 {
+        background-color: crimson;
+        color: white;
+        padding: 10px;
+      }
+      .h1:hover {
+        background-color: black;
+      }
+      /* Unvisited link */
+      a.a1:link {
+        color: #ff0000;
+      }
+
+      /* Visited link */
+      a.a1:visited {
+        color: #00ff00;
+      }
+
+      /* Hovered link */
+      a.a1:hover {
+        color: #ff00ff;
+      }
+
+      /* Active link (when clicked) */
+      a.a1:active {
+        color: #0000ff;
+      }
+
+      /* p {
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+      } */
+
+      /* div:hover p {
+        display: block;
+      }
+      p:first-child {
+        color: blue;
+      } */
+      p i:first-child {
+        color: blue;
+      }
+      input:focus {
+        background-color: yellow;
+      }
+      input:valid {
+        border: 2px solid green;
+      }
+
+      input:invalid {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <h1 class="h1">this is class 3</h1>
+    </div>
+    <div class="div1">
+      <a class="a1" href="http://www.youtube.com" target="_blank"
+        >click here to visit Google</a
+      >
+      <br />
+      <a href="http://www.facebook.com" target="_blank"
+        >click here to visit facebook</a
+      >
+    </div>
+    <div class="div1">
+      Hover over me to show the tooltip.
+      <p>this is p</p>
+      <p>This is a tooltip!</p>
+    </div>
+    <ul class="div1">
+      <p>this is</p>
+    </ul>
+    <p class="div1">
+      This is a <i>blue italic</i> text, and this <i>won't be blue</i>.
+    </p>
+    <div class="div1">
+      <input type="email" placeholder="Click to focus on me" />
+    </div>
+  </body>
+</html>
