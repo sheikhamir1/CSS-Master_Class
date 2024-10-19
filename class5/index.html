@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class5</title>
+    <style>
+      div {
+        border: 2px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+      a[target="_blank"] {
+        background-color: yellow;
+      }
+      [title~="flower"] {
+        border: 5px solid yellow;
+      }
+      /* [class|="top"] {
+        background: yellow;
+      } */
+      /* [class^="top"] {
+        background: yellow;
+      } */
+      /* [class$="top"] {
+        background: yellow;
+      } */
+      [class*="te"] {
+        background: yellow;
+      }
+      input[type="text"] {
+        width: 150px;
+        background-color: yellow;
+      }
+
+      input[type="button"] {
+        width: 120px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>this is class 5</h1>
+    </div>
+    <div>
+      <a href="https://wwww.google.com" target="_blank">google</a><br />
+      <a href="https://wwww.google.com">google2</a><br />
+      <a href="https://wwww.google.com" target="_parent">google3</a>
+      <a href="https://wwww.google.com" target="_blank">test</a><br />
+    </div>
+    <div>
+      <p title="summer flower">Flower in Summer</p>
+      <p title="my-flower">Not Styled</p>
+    </div>
+    <div>
+      <div class="top">Top Level</div>
+      <div class="top-text">Top with Text</div>
+      <div class="bottom-top">Bottom Level</div>
+      <div class="top-bottom">Bottom Level2</div>
+      <div class="topbottom">Bottom Level3</div>
+    </div>
+    <div>
+      <div class="test-case">Test Case</div>
+      <div class="template">Template</div>
+      <div class="none">No Match</div>
+    </div>
+    <div>
+      <form>
+        <input type="text" placeholder="Enter text" />
+        <input type="button" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

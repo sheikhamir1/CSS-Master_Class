@@ -1,0 +1,190 @@
+CSS Attribute Selectors: Overview and Explanation
+
+CSS attribute selectors allow you to apply styles to HTML elements based on the presence or value of their attributes. This is particularly useful when you want to target elements without using class or ID selectors, or when styling elements based on specific attribute values.
+
+Basic Syntax of Attribute Selectors
+The syntax for CSS attribute selectors is:
+
+css
+Copy code
+[attribute] {
+  property: value;
+}
+You can also target attributes with specific values:
+
+css
+Copy code
+[attribute="value"] {
+  property: value;
+}
+
+
+Common CSS Attribute Selectors and Their Usage
+1. [attribute] Selector
+The [attribute] selector is used to select elements that have a specific attribute, regardless of its value.
+
+Example:
+css
+Copy code
+a[target] {
+  background-color: yellow;
+}
+
+Explanation:
+This rule will apply a yellow background to all <a> elements that have a target attribute, regardless of the value of that attribute.
+HTML Example:
+html
+Copy code
+<a href="https://example.com" target="_blank">Open in New Tab</a>
+<a href="https://example.com">Open in Same Tab</a>
+The first link will be styled because it has the target attribute.
+
+2. [attribute="value"] Selector
+The [attribute="value"] selector matches elements with an attribute that has exactly the specified value.
+
+Example:
+css
+Copy code
+a[target="_blank"] {
+  background-color: yellow;
+}
+Explanation:
+This code will apply a yellow background to all <a> elements that have a target attribute with a value of _blank.
+HTML Example:
+html
+Copy code
+<a href="https://example.com" target="_blank">Open in New Tab</a>
+<a href="https://example.com" target="_self">Open in Same Tab</a>
+
+Only the first link will be styled.
+3. [attribute~="value"] Selector
+The [attribute~="value"] selector matches elements whose attribute value contains the specified word as part of a space-separated list.
+
+Example:
+css
+Copy code
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+Explanation:
+This will style elements with a title attribute that contains the word "flower" as a separate word.
+HTML Example:
+html
+Copy code
+<p title="summer flower">Flower in Summer</p>
+<p title="my-flower">Not Styled</p>
+
+The first <p> will be styled, but the second one will not.
+
+4. [attribute|="value"] Selector
+The [attribute|="value"] selector matches elements whose attribute value either matches the specified value or starts with the value followed by a hyphen.
+
+Example:
+css
+Copy code
+[class|="top"] {
+  background: yellow;
+}
+Explanation:
+This rule will match elements where the class attribute is either top or begins with top- (e.g., top-text).
+HTML Example:
+html
+Copy code
+<div class="top">Top Level</div>
+<div class="top-text">Top with Text</div>
+<div class="bottom">Bottom Level</div>
+The first two divs will be styled with a yellow background.
+
+5. [attribute^="value"] Selector
+The [attribute^="value"] selector matches elements whose attribute value starts with the specified value.
+
+Example:
+css
+Copy code
+[class^="top"] {
+  background: yellow;
+}
+Explanation:
+This will select elements where the class attribute starts with "top".
+HTML Example:
+html
+Copy code
+<div class="top-text">Top Text</div>
+<div class="top-header">Top Header</div>
+<div class="bottom-header">Bottom Header</div>
+The first two divs will be styled.
+
+
+6. [attribute$="value"] Selector
+The [attribute$="value"] selector matches elements whose attribute value ends with the specified value.
+
+Example:
+css
+Copy code
+[class$="test"] {
+  background: yellow;
+}
+Explanation:
+This will select elements where the class attribute ends with "test".
+HTML Example:
+html
+Copy code
+<div class="unit-test">Unit Test</div>
+<div class="finaltest">Final Test</div>
+The first div will be styled, but not the second.
+
+
+7. [attribute*="value"] Selector
+The [attribute*="value"] selector matches elements whose attribute value contains the specified value, anywhere within the value.
+
+Example:
+css
+Copy code
+[class*="te"] {
+  background: yellow;
+}
+Explanation:
+This will select elements where the class attribute contains "te", whether at the beginning, middle, or end.
+HTML Example:
+html
+Copy code
+<div class="test-case">Test Case</div>
+<div class="template">Template</div>
+<div class="none">No Match</div>
+The first two divs will be styled.
+
+8. Attribute Selectors for Styling Forms
+Attribute selectors can be particularly useful for styling forms, especially when targeting elements based on their type attribute.
+
+Example:
+css
+Copy code
+input[type="text"] {
+  width: 150px;
+  background-color: yellow;
+}
+
+input[type="button"] {
+  width: 120px;
+  background-color: lightblue;
+}
+Explanation:
+This will style all <input> elements of type="text" with a yellow background and a width of 150px.
+All <input> elements of type="button" will have a light blue background and a width of 120px.
+HTML Example:
+html
+Copy code
+<form>
+  <input type="text" placeholder="Enter text">
+  <input type="button" value="Submit">
+</form>
+
+Summary of CSS Attribute Selectors:
+Attribute Selector	Description
+[attribute]	Selects elements with the specified attribute, regardless of its value
+[attribute="value"]	Selects elements with the specified attribute and exact value
+[attribute~="value"]	Selects elements with an attribute that contains a space-separated value
+`[attribute	="value"]`
+[attribute^="value"]	Selects elements whose attribute value starts with the specified value
+[attribute$="value"]	Selects elements whose attribute value ends with the specified value
+[attribute*="value"]	Selects elements whose attribute value contains the specified value
