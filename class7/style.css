@@ -1,0 +1,22 @@
+.main {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d9b9c9b2-b80f-4dd6-b0f9-5191aed634c9/dhjhkyz-f232a37f-f981-4724-8926-215be06c8367.jpg/v1/fill/w_1600,h_901,q_75,strp/pikachu_thunder_shock___wallpaper_4k_by_jmasaryk_dhjhkyz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAxIiwicGF0aCI6IlwvZlwvZDliOWM5YjItYjgwZi00ZGQ2LWIwZjktNTE5MWFlZDYzNGM5XC9kaGpoa3l6LWYyMzJhMzdmLWY5ODEtNDcyNC04OTI2LTIxNWJlMDZjODM2Ny5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._4PPQtdm9jEYf-z1h6DbfOHA_gycAgRFAM7bV5wkV_o"); */
+}
+.p1 {
+  opacity: 1;
+}
+body {
+  /* background-color: lightblue; */
+  /* background: rgba(0, 128, 0, 0.3); */
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d9b9c9b2-b80f-4dd6-b0f9-5191aed634c9/dhjhkyz-f232a37f-f981-4724-8926-215be06c8367.jpg/v1/fill/w_1600,h_901,q_75,strp/pikachu_thunder_shock___wallpaper_4k_by_jmasaryk_dhjhkyz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAxIiwicGF0aCI6IlwvZlwvZDliOWM5YjItYjgwZi00ZGQ2LWIwZjktNTE5MWFlZDYzNGM5XC9kaGpoa3l6LWYyMzJhMzdmLWY5ODEtNDcyNC04OTI2LTIxNWJlMDZjODM2Ny5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._4PPQtdm9jEYf-z1h6DbfOHA_gycAgRFAM7bV5wkV_o");
+
+  /*short image  */
+  height: 100vh;
+  /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4dce6a18-fbf6-4646-8a0d-1acdb90305a3/dbww2ej-f39d1476-ecce-4dd6-8c90-58c8c6be0fa7.png/v1/fill/w_350,h_350/pokemon_pikachu_by_pitchblackcross_dbww2ej-350t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkY2U2YTE4LWZiZjYtNDY0Ni04YTBkLTFhY2RiOTAzMDVhM1wvZGJ3dzJlai1mMzlkMTQ3Ni1lY2NlLTRkZDYtOGM5MC01OGM4YzZiZTBmYTcucG5nIiwiaGVpZ2h0IjoiPD04MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cLzRkY2U2YTE4LWZiZjYtNDY0Ni04YTBkLTFhY2RiOTAzMDVhM1wvcGl0Y2hibGFja2Nyb3NzLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.fBl0g7H_tJ19Qwy6pHNbbY5Ir86aEANPBGZoUp14Wp8"); */
+  /* background-repeat: repeat-y; */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment:fixed; */
+}
