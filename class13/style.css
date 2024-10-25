@@ -1,0 +1,113 @@
+div {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+.textcolor {
+  color: white;
+  background-color: crimson;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  /* text-transform: capitalize;
+    text-transform: lowercase; */
+}
+.texttrans {
+  text-transform: uppercase;
+  /* text-transform: capitalize;
+    text-transform: lowercase; */
+}
+.textspace {
+  /* letter-spacing: normal; */
+  letter-spacing: 1px;
+}
+.Lineheight {
+  /* line-height: normal; */
+  line-height: 28px;
+}
+.textdeco {
+  /* text-decoration: line-through; */
+  text-decoration: none;
+}
+
+p.a {
+  text-align: justify;
+  text-align-last: right;
+  width: 300px; /* For demonstration */
+  border: 1px solid #000; /* For visibility */
+}
+
+p.b {
+  text-align: justify;
+  text-align-last: center;
+  width: 300px; /* For demonstration */
+  border: 1px solid #000; /* For visibility */
+}
+
+p.c {
+  text-align: justify;
+  text-align-last: justify;
+  width: 300px; /* For demonstration */
+  border: 1px solid #000; /* For visibility */
+}
+.textdi {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+.baseline {
+  vertical-align: baseline;
+}
+
+.superscript {
+  vertical-align: super;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+img {
+  vertical-align: middle; /* Aligns image to the middle of the line */
+}
+.textline {
+  text-decoration-line: spelling-error;
+  /* text-decoration-line: line-through underline; */
+}
+.textlineCOlor {
+  text-decoration-line: line-through underline;
+  text-decoration-color: red;
+}
+.textdecoStyle {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #000eff;
+}
+.textthick {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #e91e63;
+  text-decoration-thickness: 7px;
+}
+.textshort {
+  text-decoration: underline double red 7px;
+}
+.textind {
+  text-indent: 60px;
+}
+.spaceword {
+  word-spacing: 10px;
+}
+.spacewhite {
+  white-space: nowrap;
+}
+.textshadow {
+  /* text-shadow: 11px -12px 2px red; */
+  /* text-shadow: 0 0 3px #ff0000; */
+  /* text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff; */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}

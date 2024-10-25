@@ -1,0 +1,918 @@
+CSS Text
+CSS provides a variety of properties for styling and formatting text, allowing you to control things like color, alignment, spacing, and decoration. These properties help create visually appealing and accessible content.
+
+1. Text Color
+The color property is used to specify the color of the text. You can define the text color using:
+
+Color name (e.g., "red")
+HEX value (e.g., "#ff0000")
+RGB value (e.g., "rgb(255, 0, 0)")
+HSL value (e.g., "hsl(0, 100%, 50%)")
+Example: Setting Text Color
+
+css
+Copy code
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+In this example:
+
+The text inside the <body> element is blue.
+The text inside the <h1> heading is green.
+
+2. Text Color and Background Color
+To enhance the visual contrast, you can combine the color property (for text) with the background-color property. Ensuring high contrast between text and background colors is important for accessibility, especially for people with visual impairments.
+
+Example: Text and Background Color
+css
+Copy code
+body {
+  background-color: lightgrey;
+  color: blue;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+div {
+  background-color: blue;
+  color: white;
+}
+In this example:
+
+The background of the entire page (<body>) is light grey, and the text color is blue.
+The <h1> heading has a black background with white text.
+The <div> element has a blue background with white text.
+
+3. Key Points on Text and Background Contrast
+It is crucial to maintain high contrast between the text and background color to make the text easily readable for all users. For example, black text on a white background offers great contrast, while light grey text on a white background might be difficult to read.
+
+4. More CSS Text Formatting Properties
+There are many other CSS properties used to format text:
+
+- text-align
+The text-align property specifies the horizontal alignment of text.
+
+Example:
+css
+Copy code
+h1 {
+  text-align: center;
+}
+This centers the text inside the <h1> element.
+
+- text-transform
+The text-transform property changes the case of the text (e.g., uppercase, lowercase, capitalize).
+
+Example:
+css
+Copy code
+h2 {
+  text-transform: uppercase;
+}
+This will convert all the text in the <h2> element to uppercase.
+
+
+- letter-spacing
+The letter-spacing property controls the space between characters in the text.
+
+Example:
+css
+Copy code
+p {
+  letter-spacing: 2px;
+}
+This increases the space between characters by 2px in the paragraph text.
+
+- line-height
+The line-height property sets the height of a line of text, which can improve readability.
+
+Example:
+css
+Copy code
+p {
+  line-height: 1.5;
+}
+This will set the space between lines to be 1.5 times the height of the text.
+
+- text-decoration
+The text-decoration property controls text decoration like underlining, overlining, or line-through.
+
+Example:
+css
+Copy code
+a {
+  text-decoration: none;
+  color: blue;
+}
+This will remove the underline from links and make the link text blue.
+
+5. Complete Example of CSS Text Formatting
+Here’s a complete example demonstrating multiple text formatting properties:
+
+css
+Copy code
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #4CAF50;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+a {
+  color: #1E90FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+Body: The background color is light grey, and the text is dark grey with a simple sans-serif font.
+Heading (h1): The text is green, centered, all uppercase, with extra spacing between letters.
+Paragraph (p): The text color is grey, and the lines have increased height to improve readability. The text is justified, meaning it is aligned evenly on both sides.
+Links (a): The text color is blue, and the underline is removed by default, but it appears when you hover over the link.
+Conclusion
+CSS offers a rich set of properties for text formatting. From simple color changes to controlling text alignment, spacing, and decorations, CSS gives you the tools to create visually appealing, well-structured, and accessible text content on your web pages.
+
+******************************************************
+
+CSS Text Alignment
+CSS provides a range of properties to control the alignment and direction of text. These properties help in managing both horizontal and vertical positioning of text and other inline elements, making it easier to align content in a visually appealing and structured manner.
+
+1. Text Alignment (text-align)
+The text-align property is used to specify the horizontal alignment of text within an element. The possible values for this property are:
+
+left: Aligns the text to the left.
+right: Aligns the text to the right.
+center: Centers the text within the container.
+justify: Stretches the text so that both the left and right edges are aligned (similar to newspaper or magazine layouts).
+Example: Text Alignment
+css
+Copy code
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+The <h1> text is centered.
+The <h2> text is aligned to the left (default for left-to-right languages like English).
+The <h3> text is aligned to the right.
+Example: Justified Text
+css
+Copy code
+div {
+  text-align: justify;
+}
+In this example, the text inside the <div> is justified, meaning both the left and right margins are straight, making the lines look uniform in width.
+
+2. Text Alignment of the Last Line (text-align-last)
+The text-align-last property is used to align the last line of a block of text when the text-align property is set to justify. You can also use it to align the last line differently from the rest of the text block.
+
+left: Aligns the last line to the left.
+right: Aligns the last line to the right.
+center: Centers the last line.
+justify: Justifies the last line.
+Example: Aligning the Last Line of Text
+css
+Copy code
+p.a {
+  text-align-last: right;
+}
+
+p.b {
+  text-align-last: center;
+}
+
+p.c {
+  text-align-last: justify;
+}
+In <p class="a">, the last line is aligned to the right.
+In <p class="b">, the last line is centered.
+In <p class="c">, the last line is justified.
+
+
+3. Text Direction (direction and unicode-bidi)
+The direction property is used to set the text direction of an element. It controls whether the text flows from left-to-right (ltr) or right-to-left (rtl). This is important for languages like Arabic and Hebrew, which are read from right to left.
+
+The unicode-bidi property is used alongside the direction property to handle elements containing multiple languages or scripts. It tells the browser whether to override the default text direction based on the content.
+
+Example: Changing Text Direction
+css
+Copy code
+p {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+In this example:
+
+The text inside the paragraph flows from right to left (e.g., for languages like Arabic).
+The unicode-bidi: bidi-override forces the browser to strictly follow the set direction, overriding any embedded directional hints.
+
+4. Vertical Alignment (vertical-align)
+The vertical-align property sets the vertical alignment of an inline element, such as images or text within a line. It can align elements relative to the text baseline or other text positions (like superscript and subscript).
+
+Example: Vertical Alignment of an Image
+css
+Copy code
+img.a {
+  vertical-align: baseline;
+}
+
+img.b {
+  vertical-align: text-top;
+}
+
+img.c {
+  vertical-align: text-bottom;
+}
+
+img.d {
+  vertical-align: sub;
+}
+
+img.e {
+  vertical-align: super;
+}
+baseline: Aligns the image with the text baseline.
+text-top: Aligns the image with the top of the text.
+text-bottom: Aligns the image with the bottom of the text.
+sub: Aligns the image as subscript (below the baseline).
+super: Aligns the image as superscript (above the baseline).
+
+
+5. Summary of CSS Text Alignment and Direction Properties
+Property	Description
+text-align	Specifies the horizontal alignment of text (left, right, center, justify).
+text-align-last	Specifies how to align the last line of text when using justify or other alignments.
+direction	Specifies the text direction (left-to-right or right-to-left).
+unicode-bidi	Used with direction to handle bidirectional text (useful for multi-language documents).
+vertical-align	Specifies the vertical alignment of an inline element relative to its container (baseline, sub, super).
+
+6. Complete Example of Text Alignment and Vertical Alignment
+css
+Copy code
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+h2 {
+  text-align: left;
+  color: #333;
+}
+
+p {
+  text-align: justify;
+}
+
+p.right-align-last {
+  text-align-last: right;
+}
+
+p.center-align-last {
+  text-align-last: center;
+}
+
+img {
+  vertical-align: middle;
+}
+Heading (h1): The text is centered and colored green.
+Heading (h2): The text is left-aligned and colored dark grey.
+Paragraphs: The text is justified to ensure clean margins on both sides.
+Paragraph (right-align-last): The last line of the paragraph is right-aligned.
+Paragraph (center-align-last): The last line of the paragraph is centered.
+Images: Images are vertically aligned to the middle of the text.
+
+
+Conclusion
+CSS offers versatile properties for managing the alignment and direction of text and inline elements. Whether it’s centering text, aligning it to the last line, or controlling vertical positioning, these properties help in creating well-structured, visually balanced web layouts. Understanding text alignment and direction properties is essential for designing responsive, multilingual, and accessible web content.
+
+
+***********************************************************************
+
+CSS Text Decoration
+
+The text-decoration property in CSS allows you to add lines (like underlines or overlines) to text, and you can also customize their color, style, and thickness. This property is commonly used to style links or to create effects like striking through text.
+
+1. Text Decoration Line (text-decoration-line)
+The text-decoration-line property is used to add a line to text. You can specify multiple types of lines, such as:
+
+underline: Draws a line beneath the text.
+ove:rline Draws a line above the text.
+line-through: Strikes through the text.
+You can combine more than one value (e.g., underline and overline) to display multiple lines.
+
+Example: Adding Decoration Lines to Text
+css
+Copy code
+h1 {
+  text-decoration-line: overline;
+}
+
+h2 {
+  text-decoration-line: line-through;
+}
+
+h3 {
+  text-decoration-line: underline;
+}
+
+p {
+  text-decoration-line: overline underline;
+}
+
+h1: The text has an overline.
+h2: The text has a line-through effect.
+h3: The text is underlined.
+p: The text has both an overline and underline.
+Note: It’s generally not recommended to underline non-link text, as this can confuse users who associate underlines with links.
+
+2. Text Decoration Color (text-decoration-color)
+The text-decoration-color property is used to set the color of the decoration line. You can specify any valid CSS color value (name, HEX, RGB, HSL, etc.).
+
+Example: Setting Decoration Line Color
+css
+Copy code
+h1 {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+}
+
+h2 {
+  text-decoration-line: line-through;
+  text-decoration-color: blue;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-color: green;
+}
+
+p {
+  text-decoration-line: overline underline;
+  text-decoration-color: purple;
+}
+h1: The overline is red.
+h2: The line-through is blue.
+h3: The underline is green.
+
+p: Both the overline and underline are purple.
+
+
+3. Text Decoration Style (text-decoration-style)
+The text-decoration-style property defines the style of the decoration line. Possible values include:
+
+solid: A single solid line.
+double: A double line.
+dotted: A dotted line.
+dashed: A dashed line.
+wavy: A wavy line.
+Example: Setting Decoration Line Style
+css
+Copy code
+h1 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+p.ex1 {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
+p.ex2 {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+p.ex3 {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+}
+h1: Underlined with a solid line.
+h2: Underlined with a double line.
+h3: Underlined with a dotted line.
+p.ex1: Underlined with a dashed line.
+p.ex2: Underlined with a wavy line.
+p.ex3: Underlined with a red wavy line.
+
+
+4. Text Decoration Thickness (text-decoration-thickness)
+The text-decoration-thickness property specifies the thickness of the decoration line. You can use values like auto, specific pixel values, or percentages.
+
+Example: Setting Decoration Line Thickness
+css
+Copy code
+h1 {
+  text-decoration-line: underline;
+  text-decoration-thickness: auto;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 25%;
+}
+
+p {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: double;
+  text-decoration-thickness: 5px;
+}
+h1: Underlined with the default thickness.
+h2: Underlined with a thickness of 5px.
+h3: Underlined with a thickness of 25% relative to the font size.
+p: Underlined with a red double line that is 5px thick.
+
+5. Shorthand Property (text-decoration)
+The text-decoration property is a shorthand property that combines several text-decoration properties into one. It includes:
+
+text-decoration-line (required)
+text-decoration-color (optional)
+text-decoration-style (optional)
+text-decoration-thickness (optional)
+
+Example: Shorthand Property for Text Decoration
+css
+Copy code
+h1 {
+  text-decoration: underline;
+}
+
+h2 {
+  text-decoration: underline red;
+}
+
+h3 {
+  text-decoration: underline red double;
+}
+
+p {
+  text-decoration: underline red double 5px;
+}
+h1: Underlined.
+h2: Underlined with a red line.
+h3: Underlined with a red double line.
+p: Underlined with a red double line that is 5px thick.
+
+
+6. Removing Underlines from Links
+By default, links in HTML are underlined. You can remove the underline from links using text-decoration: none;.
+
+Example: Removing Underlines from Links
+css
+Copy code
+a {
+  text-decoration: none;
+}
+In this example, the underline is removed from all links on the page.
+
+7. Summary of CSS Text Decoration Properties
+Property	Description
+text-decoration	Shorthand property for setting all the text decoration properties in one declaration.
+text-decoration-line	Specifies the type of line (underline, overline, line-through) to be used for text.
+text-decoration-color	Specifies the color of the decoration line.
+text-decoration-style	Specifies the style of the decoration line (solid, dotted, dashed, wavy, double).
+text-decoration-thickness	Specifies the thickness of the decoration line.
+Complete Example: Text Decoration
+css
+Copy code
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  text-decoration: underline solid 5px red;
+}
+
+h2 {
+  text-decoration: line-through wavy blue;
+}
+
+h3 {
+  text-decoration: overline dashed green;
+}
+
+p {
+  text-decoration: underline double purple 3px;
+}
+
+a {
+  text-decoration: none;
+}
+h1: Underlined with a solid 5px red line.
+h2: Line-through with a wavy blue line.
+h3: Overlined with a dashed green line.
+p: Underlined with a double 3px purple line.
+a: Links have no underline.
+
+Conclusion
+The text-decoration properties give you full control over the decoration lines on text. You can specify the type, color, style, and thickness of lines, allowing for a wide variety of creative text effects. Proper use of text decoration enhances readability and adds emphasis, while still maintaining good design principles.
+
+******************************************
+
+CSS Text Transformation
+The text-transform property in CSS is used to control the capitalization of text. It can transform the text to uppercase, lowercase, or capitalize the first letter of each word.
+
+1. Text Transformation Options (text-transform)
+The text-transform property provides the following options for text transformation:
+
+uppercase: Transforms all letters in the text to uppercase.
+lowercase: Transforms all letters in the text to lowercase.
+capitalize: Capitalizes the first letter of each word in the text.
+Example: Using text-transform Property
+css
+Copy code
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+p.uppercase: Converts all text to uppercase letters.
+p.lowercase: Converts all text to lowercase letters.
+p.capitalize: Capitalizes the first letter of each word.
+
+2. Example in Action
+Let's see an example of how the text-transform property works in a real-world scenario:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p.uppercase {
+      text-transform: uppercase;
+    }
+
+    p.lowercase {
+      text-transform: lowercase;
+    }
+
+    p.capitalize {
+      text-transform: capitalize;
+    }
+  </style>
+  <title>Text Transform Example</title>
+</head>
+<body>
+
+  <p class="uppercase">This text will be uppercase.</p>
+  <p class="lowercase">THIS TEXT WILL BE LOWERCASE.</p>
+  <p class="capitalize">this text will be capitalized.</p>
+
+</body>
+</html>
+The first paragraph will display all text in uppercase.
+The second paragraph will display all text in lowercase.
+The third paragraph will capitalize the first letter of each word.
+
+3. Summary of CSS Text Transformation Property
+Property	Description
+text-transform	Controls the capitalization of text.
+The text-transform property helps to easily format text without needing to modify the HTML content itself. It is particularly useful when you need to maintain uniform text formatting, such as headings or button labels.
+
+Complete Example: Text Transformation
+css
+Copy code
+body {
+  font-family: Arial, sans-serif;
+}
+
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+p.uppercase: All text is in uppercase.
+p.lowercase: All text is in lowercase.
+p.capitalize: The first letter of each word is capitalized.
+h1: All headings of level 1 are in uppercase.
+h2: All headings of level 2 capitalize the first letter of each word.
+
+Conclusion
+The text-transform property is a simple yet powerful tool for controlling text capitalization. It enables you to quickly switch between uppercase, lowercase, or capitalized text without changing the content, making it a great feature for enhancing typography in web design.
+
+
+
+*******************************************
+
+
+CSS Text Spacing
+In CSS, text spacing properties allow you to control the indentation, spacing between characters, lines, words, and how white-space is handled within elements. These properties provide flexibility in formatting and controlling the readability of text.
+
+1. Text Indentation (text-indent)
+The text-indent property is used to control the indentation of the first line in a text block. It's commonly used to indent paragraphs.
+
+Example: Text Indentation
+css
+Copy code
+p {
+  text-indent: 50px;
+}
+This example indents the first line of the paragraph by 50px.
+
+2. Letter Spacing (letter-spacing)
+The letter-spacing property is used to specify the space between characters in a text. You can increase or decrease the space based on your design needs.
+
+Example: Letter Spacing
+css
+Copy code
+h1 {
+  letter-spacing: 5px;
+}
+
+h2 {
+  letter-spacing: -2px;
+}
+h1: Adds 5px of space between each character.
+h2: Decreases the space between characters by 2px (negative spacing).
+
+3. Line Height (line-height)
+The line-height property controls the space between lines of text. It adjusts how "tall" each line appears, affecting text readability.
+
+Example: Line Height
+css
+Copy code
+p.small {
+  line-height: 0.8;
+}
+
+p.big {
+  line-height: 1.8;
+}
+p.small: Reduces the line height to 0.8, resulting in closely spaced lines.
+p.big: Increases the line height to 1.8, resulting in more spaced-out lines.
+
+4. Word Spacing (word-spacing)
+The word-spacing property is used to control the space between words in a text block.
+
+Example: Word Spacing
+css
+Copy code
+p.one {
+  word-spacing: 10px;
+}
+
+p.two {
+  word-spacing: -2px;
+}
+p.one: Adds 10px of space between words.
+p.two: Decreases the space between words by 2px.
+
+5. White Space (white-space)
+The white-space property controls how white-space (spaces, tabs, and line breaks) inside an element is handled. For example, it can prevent text from wrapping to a new line.
+
+Example: White Space
+css
+Copy code
+p {
+  white-space: nowrap;
+}
+This example disables text wrapping, so the text in the paragraph stays on one line, even if it overflows the container.
+
+6. Example in Action
+Here's an example combining various text spacing properties:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p.indented {
+      text-indent: 30px;
+    }
+
+    h1.spaced {
+      letter-spacing: 5px;
+    }
+
+    p.tight {
+      line-height: 1.2;
+    }
+
+    p.loose {
+      line-height: 2.0;
+    }
+
+    p.wide {
+      word-spacing: 15px;
+    }
+
+    p.nowrap {
+      white-space: nowrap;
+    }
+  </style>
+  <title>Text Spacing Example</title>
+</head>
+<body>
+
+  <p class="indented">This paragraph is indented by 30px on the first line.</p>
+  <h1 class="spaced">This heading has extra space between each letter.</h1>
+  <p class="tight">This paragraph has a tighter line height.</p>
+  <p class="loose">This paragraph has a looser line height.</p>
+  <p class="wide">This paragraph has more space between each word.</p>
+  <p class="nowrap">This text will not wrap to the next line even if it overflows the container.</p>
+
+</body>
+</html>
+
+7. Summary of CSS Text Spacing Properties
+Property	Description
+text-indent	Specifies the indentation of the first line in a text.
+letter-spacing	Specifies the space between characters in a text.
+line-height	Specifies the space between lines of text.
+word-spacing	Specifies the space between words in a text.
+white-space	Specifies how to handle white-space in the text.
+
+
+8. Conclusion
+Text spacing properties in CSS give you control over how your text is displayed and formatted, improving readability and the overall design of your web page. Whether you're adding indentation, adjusting line height, or handling white-space, these properties help refine the appearance of your content.
+
+
+*******************************************************
+
+
+
+CSS Text Shadow
+The text-shadow property in CSS allows you to add shadow effects to text. It's a versatile property that can be used to enhance the design of text by adding depth, glow, or other effects.
+
+1. Basic Text Shadow (text-shadow)
+In its simplest form, the text-shadow property takes two values: the horizontal and vertical offsets of the shadow. For example, a shadow that moves 2px to the right and 2px down.
+
+Example: Basic Text Shadow
+css
+Copy code
+h1 {
+  text-shadow: 2px 2px;
+}
+This adds a shadow that is 2px to the right and 2px below the text.
+
+2. Text Shadow with Color
+You can add a color to the shadow by specifying the color after the horizontal and vertical offsets.
+
+Example: Shadow with Color
+css
+Copy code
+h1 {
+  text-shadow: 2px 2px red;
+}
+This adds a red shadow that is 2px to the right and 2px down from the text.
+
+3. Text Shadow with Blur Effect
+In addition to the horizontal and vertical offsets, you can add a blur radius to the shadow. The blur effect softens the edges of the shadow.
+
+Example: Shadow with Blur
+css
+Copy code
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+This adds a red shadow that is 2px to the right, 2px down, and with a 5px blur effect.
+
+4. More Text Shadow Examples
+Here are some additional examples that combine color, blur, and multiple shadows for more complex effects.
+
+Example 1: White Text with Black Shadow
+css
+Copy code
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+This creates a white text with a black shadow (2px right, 2px down, and 4px blur).
+Example 2: Red Neon Glow Effect
+css
+Copy code
+h1 {
+  text-shadow: 0 0 3px #ff0000;
+}
+This creates a neon red glow around the text by using a 0px horizontal and 0px vertical offset with a 3px blur.
+Example 3: Red and Blue Neon Glow
+css
+Copy code
+h1 {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+This creates a dual neon glow effect with a red and blue shadow around the text.
+Example 4: Complex Shadow with Multiple Layers
+css
+Copy code
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+This example creates a white text with:
+A subtle black shadow (1px right, 1px down, 2px blur),
+A blue outer glow (25px blur),
+A dark blue inner glow (5px blur).
+
+5. Combining Text Shadow with Other CSS Properties
+The text-shadow property works well when combined with other CSS properties like font size, font style, and text effects.
+
+Example: Text with Shadow and Custom Font
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    h1.glow {
+      font-family: 'Arial', sans-serif;
+      font-size: 3em;
+      color: white;
+      text-shadow: 2px 2px 5px black, 0 0 10px blue;
+    }
+  </style>
+  <title>Text Shadow Example</title>
+</head>
+<body>
+
+  <h1 class="glow">Glowing Text Shadow</h1>
+
+</body>
+</html>
+This example shows glowing text with a black shadow and a blue glow, using a custom font and size.
+
+6. Summary of CSS Text Shadow Property
+Property	Description
+text-shadow	Adds shadow to text, specifying horizontal offset, vertical offset, blur radius, and color.
+
+
+7. Conclusion
+The text-shadow property provides a simple yet powerful way to create visual effects for text. Whether you're adding depth, a neon glow, or a multi-layered shadow effect, text-shadow can enhance your text's appearance on the web. Experiment with different combinations of offsets, blur radius, and colors to achieve unique styles.
+
