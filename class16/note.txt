@@ -1,0 +1,273 @@
+CSS Lists
+
+CSS allows you to style both unordered and ordered HTML lists in various ways, including customizing list markers, adding images as markers, changing the position of markers, and adding colors to list items.
+
+Unordered Lists <ul> and Ordered Lists <ol>
+In HTML, there are two primary types of lists:
+
+Unordered lists (<ul>) - Lists marked with bullets.
+Ordered lists (<ol>) - Lists marked with numbers or letters.
+CSS properties let you customize the list markers, use images as markers, adjust marker positions, and style list backgrounds.
+
+Setting Different List Item Markers
+The list-style-type property sets the type of list item marker for ordered and unordered lists.
+
+Example:
+
+css
+Copy code
+ul.a {
+  list-style-type: circle; /* Circle bullets */
+}
+
+ul.b {
+  list-style-type: square; /* Square bullets */
+}
+
+ol.c {
+  list-style-type: upper-roman; /* Roman numerals */
+}
+
+ol.d {
+  list-style-type: lower-alpha; /* Lowercase letters */
+}
+Using an Image as the List Item Marker
+The list-style-image property uses an image as the list item marker.
+
+Example:
+
+css
+Copy code
+ul {
+  list-style-image: url('sqpurple.gif'); /* Custom image for bullets */
+}
+Positioning List Item Markers
+The list-style-position property determines if the marker is inside or outside the list item.
+
+outside (default): Marker is outside the list item text.
+inside: Marker is inside the list item text.
+Example:
+
+css
+Copy code
+ul.a {
+  list-style-position: outside; /* Bullet outside */
+}
+
+ul.b {
+  list-style-position: inside; /* Bullet inside */
+}
+Removing Default List Marker and Spacing
+To remove markers/bullets and reset margins and padding, use list-style-type: none along with margin: 0 and padding: 0.
+
+Example:
+
+css
+Copy code
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+Using the Shorthand list-style Property
+The list-style property is a shorthand to set all list properties in one declaration. The order of values is list-style-type, list-style-position, and list-style-image.
+
+Example:
+
+css
+Copy code
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+Styling Lists with Background Colors
+CSS can also add background colors to entire lists and individual list items for a more customized look.
+
+Example:
+
+css
+Copy code
+ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+Result:
+
+A colorful list with styled backgrounds and margins for each item.
+
+More Examples
+Customized List with a Red Left Border:
+
+Use border-left on the <ul> or <ol> element to add a colored left border.
+Full-width Bordered List Without Bullets:
+
+Remove bullets with list-style-type: none and add a full-width border on the list.
+Display All Different List Item Markers:
+
+Experiment with various list-style-type values, like disc, circle, decimal, lower-greek, etc., to see different marker styles.
+With CSS lists, you can create clean, organized lists with custom styles to fit any design.
+
+
+
+
+
+
+
+
+************************************************************
+
+
+
+
+
+
+
+CSS Tables
+
+CSS can enhance the appearance and readability of HTML tables, allowing you to add borders, set widths, align text, style with colors, and make tables responsive.
+
+Basic Table Borders
+You can add borders to <table>, <th>, and <td> elements with the border property.
+
+Example:
+
+css
+Copy code
+table, th, td {
+  border: 1px solid;
+}
+Full-Width Table
+To make a table span the entire width of the page, set width: 100% on the <table> element.
+
+Example:
+
+css
+Copy code
+table {
+  width: 100%;
+}
+Collapsing Borders
+By default, tables with borders applied to both the table and its cells may appear with double borders. The border-collapse property can merge them into a single border.
+
+Example:
+
+css
+Copy code
+table {
+  border-collapse: collapse;
+}
+Table Width and Height
+Control the size of your table with width and height properties. For example, width: 100% creates a full-width table, while setting height on <th> or <td> elements adjusts cell height.
+
+Example:
+
+css
+Copy code
+table {
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+To limit the table width to half the page, set width: 50%.
+
+CSS Table Alignment
+Horizontal Alignment: Use text-align to align text in cells. By default, <th> content is center-aligned and <td> content is left-aligned.
+Vertical Alignment: Use vertical-align to align text vertically within a cell.
+Example:
+
+css
+Copy code
+td {
+  text-align: center; /* Center-align text */
+  height: 50px;
+  vertical-align: bottom; /* Align text to the bottom */
+}
+Table Padding
+Padding adds space between the content and cell borders. Apply it to <th> and <td> elements for even spacing.
+
+Example:
+
+css
+Copy code
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+Horizontal Dividers
+To add horizontal dividers between rows, use border-bottom on <th> and <td> elements.
+
+Example:
+
+css
+Copy code
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+Hoverable Table Rows
+The :hover selector highlights rows on mouse over.
+
+Example:
+
+css
+Copy code
+tr:hover {
+  background-color: coral;
+}
+Striped Tables
+For zebra-striped tables, use the nth-child() selector to apply background color to alternate rows.
+
+Example:
+
+css
+Copy code
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+Table Color
+To change the background color and text color of header cells (<th>), apply the background-color and color properties.
+
+Example:
+
+css
+Copy code
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+Responsive Tables
+Wrap your table in a <div> with overflow-x: auto to allow horizontal scrolling on small screens.
+
+Example:
+
+html
+Copy code
+<div style="overflow-x:auto;">
+  <table>
+    <!-- Table content -->
+  </table>
+</div>
+This setup ensures the table remains readable on devices with smaller screens by introducing a scroll bar when needed.
+
+More Examples
+Fancy Table: Add advanced styles like gradients, shadows, and borders for a more sophisticated table design.
+Positioning the Table Caption: Use CSS to control the position of the table caption for a polished layout.
+CSS provides flexibility to style tables in ways that improve both functionality and appearance, making them versatile and responsive across devices.

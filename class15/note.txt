@@ -1,0 +1,88 @@
+
+CSS Icons
+Icons are a great way to enhance the visual appeal and usability of a web page. Adding icons is simple when using an icon library such as Font Awesome, Bootstrap Icons, or Google Icons.
+
+How to Add Icons
+
+The easiest way to add an icon is by using an icon library, where icons can be added by applying a specific icon class to an HTML element (such as <i> or <span>). All icons in these libraries are scalable vector graphics, which can be styled using CSS for size, color, shadows, and more.
+
+Font Awesome Icons
+To use Font Awesome, create an account at fontawesome.com and get a code to include in the <head> of your HTML document:
+
+html
+Copy code
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+Example:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <i class="fas fa-cloud"></i>
+  <i class="fas fa-heart"></i>
+  <i class="fas fa-car"></i>
+  <i class="fas fa-file"></i>
+  <i class="fas fa-bars"></i>
+</body>
+</html>
+Result:
+
+Displays various icons (cloud, heart, car, file, bars) on the page.
+
+Bootstrap Icons
+Bootstrap has its own set of glyph icons. To use them, add this line inside the <head> section of your HTML:
+
+html
+Copy code
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+Example:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <i class="glyphicon glyphicon-cloud"></i>
+  <i class="glyphicon glyphicon-remove"></i>
+  <i class="glyphicon glyphicon-user"></i>
+  <i class="glyphicon glyphicon-envelope"></i>
+  <i class="glyphicon glyphicon-thumbs-up"></i>
+</body>
+</html>
+Result:
+
+Displays various Bootstrap icons (cloud, remove, user, envelope, thumbs-up) on the page.
+
+Google Icons (Material Icons)
+To use Google’s Material Icons, add this link in the <head> of your HTML:
+
+html
+Copy code
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+Example:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <i class="material-icons">cloud</i>
+  <i class="material-icons">favorite</i>
+  <i class="material-icons">attachment</i>
+  <i class="material-icons">computer</i>
+  <i class="material-icons">traffic</i>
+</body>
+</html>
+
+
+
