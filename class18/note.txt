@@ -1,0 +1,113 @@
+CSS Layout - The position Property
+
+The position property defines how an element is positioned within a web page layout. Elements can be positioned in various ways—static, relative, fixed, absolute, and sticky—by setting the position property and using the top, bottom, left, and right properties.
+
+position: static
+Default Position: HTML elements are statically positioned by default.
+Behavior: Static elements are positioned according to the normal document flow, and top, bottom, left, and right properties do not apply.
+Example:
+
+css
+Copy code
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+
+position: relative
+Relative to Normal Position: An element with position: relative is positioned relative to its original position.
+Adjustment: top, right, bottom, and left properties adjust the element's position relative to its default position.
+Effect on Layout: Other content is not adjusted to fill the gap left by the moved element.
+Example:
+
+css
+Copy code
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+
+position: fixed
+Fixed in Viewport: Elements with position: fixed stay in place within the viewport, regardless of page scrolling.
+Positioning: Positioned using top, right, bottom, and left.
+Effect on Layout: The element is removed from the normal document flow, so no gap is left where it would otherwise be located.
+Example:
+
+css
+Copy code
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+
+position: absolute
+Relative to Positioned Ancestor: An absolute element is positioned relative to the nearest positioned ancestor (parent element with a non-static position).
+
+Positioning in Absence of Positioned Ancestor: If no positioned ancestor exists, it is positioned relative to the document body and moves with page scrolling.
+Effect on Layout: Elements with position: absolute are removed from the normal document flow and may overlap other content.
+Example:
+
+css
+Copy code
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+}
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+
+position: sticky
+Sticky Based on Scroll: Sticky elements toggle between relative and fixed, depending on the user’s scroll position.
+Offset Requirement: Must define at least one of top, right, bottom, or left for sticky positioning to work.
+Behavior: Initially positioned relatively until a specified offset is reached; then it "sticks" like a fixed element.
+Example:
+
+css
+Copy code
+div.sticky {
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+
+Positioning Text Over an Image
+To place text over an image, position: absolute is often used, with the container element set to position: relative.
+
+Example:
+
+html
+Copy code
+<div class="image-container">
+  <img src="image.jpg" alt="Example Image">
+  <div class="text-overlay">Your Text Here</div>
+</div>
+css
+Copy code
+.image-container {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+
+Summary of Position Values
+The position property helps create complex layouts and dynamic UI effects by adjusting how elements behave within the document layout, creating versatile options for fixed, relative, and scroll-based designs.
