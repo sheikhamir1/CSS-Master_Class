@@ -1,0 +1,148 @@
+The overflow property in CSS controls what happens when the content inside an element overflows its specified area. Let’s explore each overflow property value with examples.
+
+1. overflow: visible
+
+The default overflow behavior allows content to overflow and display outside the element's box without being clipped.
+
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .visible-overflow {
+    width: 200px;
+    height: 65px;
+    background-color: coral;
+    overflow: visible;
+  }
+</style>
+</head>
+<body>
+
+<div class="visible-overflow">
+  This text is really long and will overflow the box. Overflow: visible lets the content go outside the box without clipping.
+</div>
+
+</body>
+</html>
+
+Explanation: The text will flow outside of the box because overflow: visible doesn’t restrict it to the box boundaries.
+
+
+2. overflow: hidden
+
+This value clips any overflowed content, meaning any part of the content that exceeds the box boundaries is hidden.
+
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .hidden-overflow {
+    width: 200px;
+    height: 65px;
+    background-color: coral;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="hidden-overflow">
+  This text is really long and will overflow the box. Overflow: hidden prevents content from going outside the box.
+</div>
+
+</body>
+</html>
+
+Explanation: Only the content that fits inside the box is visible. The rest is clipped and cannot be accessed or scrolled.
+
+3. overflow: scroll
+
+This value always adds scrollbars, both horizontally and vertically, even if they aren’t necessary.
+
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .scroll-overflow {
+    width: 200px;
+    height: 65px;
+    background-color: coral;
+    overflow: scroll;
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-overflow">
+  This text is really long and will overflow the box. Overflow: scroll forces scrollbars to appear even if the content doesn’t fully overflow.
+</div>
+
+</body>
+</html>
+
+Explanation: Both horizontal and vertical scrollbars will be added regardless of content size.
+
+4. overflow: auto
+
+This value adds scrollbars only if the content overflows, meaning it doesn’t show scrollbars unless needed.
+
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .auto-overflow {
+    width: 200px;
+    height: 65px;
+    background-color: coral;
+    overflow: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="auto-overflow">
+  This text is really long and will overflow the box. Overflow: auto only adds scrollbars if the content overflows.
+</div>
+
+</body>
+</html>
+
+Explanation: The scrollbars appear only if the content doesn’t fit within the box. If the content is shorter, no scrollbar appears.
+
+5. overflow-x and overflow-y
+
+These properties allow control over horizontal and vertical overflow independently.
+
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .x-y-overflow {
+    width: 200px;
+    height: 65px;
+    background-color: coral;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Add vertical scrollbar */
+  }
+</style>
+</head>
+<body>
+
+<div class="x-y-overflow">
+  This text is really long and will overflow the box. overflow-x: hidden hides the horizontal scrollbar, while overflow-y: scroll shows a vertical scrollbar if needed.
+</div>
+
+</body>
+</html>
+
+Explanation: The horizontal scrollbar is hidden (overflow-x: hidden), and a vertical scrollbar appears if the content overflows vertically (overflow-y: scroll).
