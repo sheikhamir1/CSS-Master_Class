@@ -1,0 +1,148 @@
+CSS Layout - The z-index Property
+
+The z-index property in CSS controls the stack order of elements that have overlapping positions. Elements with higher z-index values are stacked on top of elements with lower z-index values. This property is crucial for layered layouts where elements may overlap.
+How the z-index Property Works
+
+    Stack Order: The z-index property determines which elements appear above or below others when they overlap.
+    Positive and Negative Values: z-index can be set to positive or negative values. Positive values place elements on top, while negative values place elements further back in the stack.
+    Applicable to Positioned Elements: z-index only applies to elements with position: absolute, position: relative, position: fixed, position: sticky, or elements within a display: flex container.
+
+Basic Example of z-index
+
+In this example, an image is placed behind a heading by using a negative z-index:
+
+HTML:
+
+html
+
+<h1>This is a heading</h1>
+<img src="image.jpg" alt="Example Image">
+
+CSS:
+
+css
+
+h1 {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+    Here, the img element has a z-index of -1, so it is positioned behind the heading (h1) element with z-index: 1.
+
+Advanced Example with Multiple z-index Layers
+
+In this example, three boxes (black-box, gray-box, green-box) overlap, and we use z-index to control their stack order.
+
+HTML Structure:
+
+html
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+CSS Styling:
+
+css
+
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+
+    black-box has a z-index of 1 and appears below gray-box and green-box.
+    gray-box has a z-index of 3, so it appears on top of all other boxes.
+    green-box has a z-index of 2, placing it between gray-box and black-box.
+
+Example Without z-index
+
+If z-index is not specified, the elements stack according to the order they appear in the HTML. The last element in the HTML appears on top.
+
+HTML:
+
+html
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+CSS:
+
+css
+
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+
+    Without z-index values, green-box appears on top because it is listed last in the HTML.
+
+Important Points about z-index
+
+    Only Works on Positioned Elements: z-index only works on elements with position set to relative, absolute, fixed, or sticky, or on flex items.
+    Stack Context: Each positioned element creates a "stacking context," meaning the z-index values only apply to elements within the same context.
+    Negative z-index: Elements with negative z-index values can be placed behind other elements but may still overlay elements in other stacking contexts.
+
+The z-index property allows for flexible and controlled layouts, enabling layered designs where you control the depth and layering of elements easily
