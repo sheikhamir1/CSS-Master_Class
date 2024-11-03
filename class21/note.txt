@@ -1,4 +1,5 @@
 The float and clear properties in CSS are essential for positioning elements and controlling layout behavior, especially for text and images. Let's go through these properties with examples to see how each can be applied.
+
 1. The float Property
 
 The float property allows an element to "float" to the left or right of its container, which is commonly used to wrap text around images or position elements side by side.
@@ -84,9 +85,18 @@ html
     width: 30%;
     color: white;
   }
-  .box1 { background-color: red; }
-  .box2 { background-color: yellow; }
-  .box3 { background-color: green; }
+  .box1 {
+  background-color: red;
+  margin: 10px;
+}
+  .box2 {
+  background-color: yellow;
+  margin: 10px;
+}
+  .box3 {
+  background-color: green;
+  margin: 10px;
+}
 </style>
 </head>
 <body>
@@ -200,6 +210,7 @@ html
 </html>
 
 Explanation: Each div is floated to the left with a width of 33.33%, creating a grid layout with three columns.
+
 6. Navigation Menu with Float
 
 Floats are also useful for creating horizontal navigation menus.
